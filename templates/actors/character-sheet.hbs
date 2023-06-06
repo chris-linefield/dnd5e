@@ -83,9 +83,8 @@
         <input name="system.attributes.mana.value" type="text" value="{{mana.value}}" placeholder="10"
             data-tooltip="DND5E.ManaPointsCurrent" data-dtype="Number">
         <span class="sep"> / </span>
-        <span data-tooltip="{{#if source.attributes.mana.max}}DND5E.ManaPointsOverride{{else}}DND5E.ManaPointsMax{{/if}}">
-            {{mana.max}}
-        </span>
+        <input name="system.attributes.mana.max" type="text" value="{{mana.value.max}}" placeholder="10"
+            data-tooltip="DND5E.ManaPointsMax" data-dtype="Number">
     </div>
     <footer class="attribute-footer">
         <input name="system.attributes.mana.temp" type="text" class="tempmana"

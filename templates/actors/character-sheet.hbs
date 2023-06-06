@@ -73,6 +73,30 @@
                             data-tooltip="DND5E.HitPointsTempMax" data-dtype="Number">
                     </footer>
                 </li>
+                
+                <li class="attribute mana">
+    <h4 class="attribute-name box-title">{{localize "DND5E.ManaPoints"}}</h4>
+    <a class="config-button" data-action="mana-points" data-tooltip="DND5E.ManaPointsConfig">
+        <i class="fas fa-cog"></i>
+    </a>
+    <div class="attribute-value multiple">
+        <input name="system.attributes.mana.value" type="text" value="{{mana.value}}" placeholder="10"
+            data-tooltip="DND5E.ManaPointsCurrent" data-dtype="Number">
+        <span class="sep"> / </span>
+        <span data-tooltip="{{#if source.attributes.mana.max}}DND5E.ManaPointsOverride{{else}}DND5E.ManaPointsMax{{/if}}">
+            {{mana.max}}
+        </span>
+    </div>
+    <footer class="attribute-footer">
+        <input name="system.attributes.mana.temp" type="text" class="tempmana"
+            placeholder="+{{ localize 'DND5E.Temp' }}" value="{{mana.temp}}"
+            data-tooltip="DND5E.ManaPointsTemp" data-dtype="Number">
+        <input name="system.attributes.mana.tempmax" type="text" class="tempmana"
+            placeholder="+{{ localize 'DND5E.Max' }}" value="{{mana.tempmax}}"
+            data-tooltip="DND5E.ManaPointsTempMax" data-dtype="Number">
+    </footer>
+</li>
+
 
                 <li class="attribute hit-dice">
                     <h4 class="attribute-name box-title">{{ localize "DND5E.HitDice" }}</h4>
